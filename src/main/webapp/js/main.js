@@ -15,8 +15,8 @@ require.config({
         "angular-resource": {
             deps: ["angular"]
         }
-    } ,
-    deps: ['app']
+    } /**,
+    deps: ['app'] */
 })
 
 

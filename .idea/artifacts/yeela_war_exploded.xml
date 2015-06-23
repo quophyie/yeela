@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" build-on-make="true" name="yeela:war exploded">
-    <output-path>$PROJECT_DIR$/target/memorybank</output-path>
+  <artifact type="exploded-war" name="yeela:war exploded">
+    <output-path>$PROJECT_DIR$/target/yeela</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">

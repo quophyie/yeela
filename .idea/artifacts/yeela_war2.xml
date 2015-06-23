@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="yeela:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="yeela.war">
-      <element id="artifact" artifact-name="yeela:war exploded" />
-    </root>
-  </artifact>
-</component>
