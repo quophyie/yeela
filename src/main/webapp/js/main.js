@@ -15,8 +15,21 @@ require.config({
         "angular-resource": {
             deps: ["angular"]
         }
-    } /**,
-    deps: ['app'] */
-})
+    } ,
+    deps: ['app']
+});
+
+
+/*require(['app'],
+    function() {
+        angular.bootstrap(document, ['yeela']);
+    }
+);
+ */
+/*require(['angular', 'app'], function (app) {
+    angular.element(document).ready(function () {
+        angular.bootstrap(document, ['yeela']);
+    });
+}); */
 
 

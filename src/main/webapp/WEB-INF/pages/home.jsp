@@ -17,7 +17,8 @@
   <!--<script type="text/javascript" src="/js/app.js"></script>    -->
     <script data-main="../js/main" src="../js/bower_components/requirejs/require.js"></script>
 </head>
-<body ng-app="app">
+<!--<body ng-app="yeela">-->
+<body>
      <div class="container-fluid" ng-view>
        <div class="jumbotron" ng-controller="HomeController as homeCntllr">
          <div>The message is {{message}}</div>
