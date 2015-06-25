@@ -9,10 +9,10 @@ define([
     'angular',
     'app'/*,
     'routes'   */
-], function (require, ng) {
+], function (require, angular) {
     'use strict';
 
     require(['bower_components/domReady/domReady'], function (document) {
-        ng.bootstrap(document, ['app']);
+    	angular.bootstrap(document, ['yeelawebapp']);
     });
 });

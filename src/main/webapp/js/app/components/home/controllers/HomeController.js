@@ -1,9 +1,9 @@
 /**
  * Created by dman on 23/06/15.
  */
-
-/*require(["app"], function(app) {
-    app.controller(
+/*define([], function() {
+require(["app"], function(app) {
+    return app.controller(
         "HomeController",
         function($scope) {
             $scope.sayHello = function() {
@@ -17,6 +17,7 @@
 
         }
     );
+});
 });*/
 
 /*define(['app'], function (app) {
@@ -26,11 +27,12 @@
         var items = ["Car", "Bike", "House"]
         $scope.items = items;
     }); */
-
+//define([], function (app) {
 define(['app'], function (app) {
-    app.controller('HomeController', function ($scope) {
+    return app.controller('HomeController', ['$scope',function ($scope) {
         $scope.message = "Message from View1Ctrl";
         var items = ["Car", "Bike", "House"]
         $scope.items = items;
-    });
+    }]);
 });
+//});

@@ -108,28 +108,50 @@ app.controller('HomeController', MemoryBank.home.controllers.HomeController) */
   */
 
 
-define(['require','angular' ], function (_require,angular) {
-    var app = angular.module("webapp", ["ngResource"]);
+define(['angular', 'angular-resource', 'angular-route','angularAMD'/*,'app/components/home/controllers/HomeController'*/ ], function (angular, angularResource, angularRoute,angularAMD ) {
+    var app = angular.module("yeelawebapp", ['ngRoute','ngResource']);
 
-    /*app.config(function ($routeProvider) {
+    app.config(['$routeProvider',function ($routeProvider) {
         $routeProvider
-            .when("/home", angularAMD.route({
-                templateUrl: 'view_home.html', controller: 'HomeCtrl', controllerUrl: 'controller_home'
-            }))
-            .when("/view1", angularAMD.route({
+        
+        /*.when("/",{
+            templateUrl: '/yeela/home', controller: 'HomeController', controllerUrl: 'app/components/home/controllers/HomeController'
+        })*/
+	        .when("/",angularAMD.route({
+	            templateUrl: '/yeela/home', controller: 'HomeController', controllerUrl: 'app/components/home/controllers/HomeController'
+	        }))
+            .when("/home",{
+                templateUrl: '/yeela/home', controller: 'HomeController'//, controllerUrl: 'controller_home'
+            })
+            /*.when("/view1", angularAMD.route({
                 templateUrl: 'view_view1.html', controller: 'View1Ctrl', controllerUrl: 'controller_view1'
-            }))
+            }))*/
             .otherwise({redirectTo: "/home"});
-    });
+    }]);
 
-    return angularAMD.bootstrap(app);
-    */
-   /* require(['bower_components/domReady/domReady'], function (document) {
+    //return angularAMD.bootstrap(app);
+    
+    /*require(['bower_components/domReady/domReady'], function (document) {
         angular.bootstrap(document, ['app']);
     }); */
 
-    return app;
+    
+   /*if (document.readyState === 'interactive' || document.readyState === 'complete') {
+        return angular.bootstrap(document.documentElement, ['yeelawebapp']);
+  } */
+/*else {
+        document.onreadystatechange = function () {
+            if (document.readyState === 'interactive') {
+                angular.bootstrap(document.documentElement, [app.name]);
+            }
+        };
+    }*/
+    
+   // return app;
+    return angularAMD.bootstrap(app);;
 });
+    //return app;
+//});
 
 
 

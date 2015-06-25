@@ -13,7 +13,7 @@
 
 	<servlet-mapping>
 		<servlet-name>yeela-dispatcher</servlet-name>
-		<url-pattern>/yeela/*</url-pattern>
-		<!--<url-pattern>/yeela/*</url-pattern>-->
+		 <url-pattern>/</url-pattern>
+		<!--  <url-pattern>/yeela/</url-pattern>-->
 	</servlet-mapping>
 </web-app>
