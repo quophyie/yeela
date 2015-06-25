@@ -26,47 +26,7 @@ require.config({
         }
     },
     //Load the app
-    //deps: ['bootstrap']
     deps: ['app']
 });
-
-/*require(['angular', 'app'], function (angular, app) {
-    'use strict';*/
-
-    /*require(['bower_components/domReady/domReady'], function (document) {
-    	angular.bootstrap(document, ['app']);
-    });*/
-    /*if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        angular.bootstrap(document.documentElement, ['yeelawebapp']);
-    	// angular.bootstrap(app);
-    }*/ /*else {
-        document.onreadystatechange = function () {
-            if (document.readyState === 'interactive') {
-                angular.bootstrap(document.documentElement, [app.name]);
-            }
-        };
-    }*/
-//});
-
-/*define("app", ["angular", "angular-resource"], function(angular) {
-    var app = angular.module("app", ["ngResource"] );
-    // you can do some more stuff here like calling app.factory()...
-    return app;
-}); */
-
-/*require(['app'],
-    function() {
-        angular.bootstrap(document, ['yeela']);
-    }
-);*/
-
-/*require(['angular', 'app'], function (app) {
-    angular.element(document).ready(function () {
-        angular.bootstrap(document, ['yeela']);
-    });
-}); */
-
-
-
 
 
