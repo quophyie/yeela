@@ -16,20 +16,30 @@ require.config({
             deps: ["angular"]
         }
     } ,
-    deps: ['app']
+    deps: ['./bootstrap']
+    //deps: ['./app']
 });
 
+
+/*define("app", ["angular", "angular-resource"], function(angular) {
+    var app = angular.module("app", ["ngResource"] );
+    // you can do some more stuff here like calling app.factory()...
+    return app;
+}); */
 
 /*require(['app'],
     function() {
         angular.bootstrap(document, ['yeela']);
     }
-);
- */
+);*/
+
 /*require(['angular', 'app'], function (app) {
     angular.element(document).ready(function () {
         angular.bootstrap(document, ['yeela']);
     });
 }); */
+
+
+
 
 
