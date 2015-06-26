@@ -2,9 +2,10 @@
  * Created by dman on 19/06/15.
  */
 
-define(['angular', 'angular-resource', 'angular-route','angularAMD'], function (angular, angularResource, angularRoute,angularAMD ) {
+define(['angular', 'ngResource', 'ngRoute','angularAMD', 'toaster','ngDialog', 'ngAnimate'], function (angular, angularResource, angularRoute,angularAMD, toaster, ngDialog, ngAnimate ) {
 	'use strict'
-    var app = angular.module("yeelawebapp", ['ngRoute','ngResource']);
+	//Pass shimmed objects/modules ('ngRoute','ngResource', 'toaster','ngDialog') as dependencies to the app i.e. 'yeela'
+    var app = angular.module("yeelawebapp", ['ngRoute','ngResource', 'toaster','ngDialog']);
 
     app.config(['$routeProvider',function ($routeProvider) {
         $routeProvider

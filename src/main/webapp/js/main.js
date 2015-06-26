@@ -6,33 +6,45 @@ require.config({
    // baseUrl: "js",
     paths: {
         "angular": "bower_components/angular/angular",
-        "angular-resource": "bower_components/angular-resource/angular-resource",
-        "angular-route": "bower_components/angular-route/angular-route",
+        "ngResource": "bower_components/angular-resource/angular-resource",
+        "ngRoute": "bower_components/angular-route/angular-route",
         'angularAMD': 'bower_components/angularAMD/angularAMD',
-        'angular-animate':'bower_components/angular-animate/angular-animate' ,
+        'ngAnimate':'bower_components/angular-animate/angular-animate' ,
         'toaster':'bower_components/angularjs-toaster/toaster',
-        'ngDialog':'bower_components/ngDialog/js/ngDialog'
+        'ngDialog':'bower_components/ngDialog/js/ngDialog'/*,
+        'jquery':'bower_components/jquery/dist/jquery'*/
     },
     shim: {
-        "angular": {
-            exports: "angular"
+        angular: {
+            exports: 'angular'
         },
-        "angular-resource": {
+        ngResource: {
             deps: ["angular"]
         },
         angularAMD: {
-            deps: ["angular"]
+            deps: ['angular']
         },
         
-        "angular-route": {
+        ngRoute: {
             deps: ["angular"]
         },
-        'toaster':{
-            deps:['angular', 'angular-animate']
+
+        ngAnimate :{
+            deps: ["angular"]
         },
-        'ngDialog' :{
+        jquery: {
+            exports: 'jquery'
+          },
+        toaster:{
+            deps:['angular','ngAnimate']//,
+            //exports: 'toaster'
+          
+        	 //deps: ['jquery']
+        },
+        ngDialog :{
             deps: ["angular"]
         }
+        
     },
     //Load the app
     deps: ['app']
