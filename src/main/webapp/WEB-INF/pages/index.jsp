@@ -9,9 +9,15 @@
 <html>
 <head>
     <title>Memory Bank</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bower_components/bootstrap/dist/css/bootstrap.css">
-  <script type="text/javascript" src="css/bower_components/jquery/dist/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="css/bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="css/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="js/bower_components/angularjs-toaster/toaster.css">
+    <link rel="stylesheet" href="js/bower_components/ngDialog/css/ngDialog.css">
+    <link rel="stylesheet" href="js/bower_components/ngDialog/css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="js/bower_components/ngDialog/css/ngDialog-theme-plain.css">
+    <link rel="stylesheet" href="js/bower_components/ngDialog/css/ngDialog-custom-width.css">
   <!--<script type="text/javascript" src="/css/bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script type="text/javascript" src="/js/bower_components/angularjs/angular.js"></script>-->
   <!--<script type="text/javascript" src="/js/app.js"></script>    -->

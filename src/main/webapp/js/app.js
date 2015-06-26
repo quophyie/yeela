@@ -11,7 +11,7 @@ define(['angular', 'angular-resource', 'angular-route','angularAMD'], function (
 	        .when("/",angularAMD.route({
 	            templateUrl: '/yeela/home', controller: 'HomeController', controllerUrl: 'app/components/home/controllers/HomeController'
 	        }))
-            .when("/home",ngularAMD.route({
+            .when("/home",angularAMD.route({
                 templateUrl: '/yeela/home', controller: 'HomeController',controllerUrl: 'app/components/home/controllers/HomeController'
             }))
             .when("/view1", angularAMD.route({
