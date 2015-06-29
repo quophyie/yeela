@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class DialogController {
     @RequestMapping(method = RequestMethod.GET)
     public String defaultDialog(){
-        return "defaultDialog" ;
+        return "dialog/defaultDialog" ;
     }
+
+     @RequestMapping(value = "loginDialog", method = RequestMethod.GET)
+     public String loginDialog() {
+        return "login/login";
+     }
+
 }

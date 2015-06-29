@@ -4,7 +4,7 @@
 
 define(['app',], function (app) {
     return app.controller('HomeController', ['$scope','toaster','ngDialog',function ($scope,toaster,ngDialog) {
-        $scope.message = "Message from View1Ctrl";
+        this.message = "Message from View1Ctrl";
         var items = ["Car", "Bike", "House"]
         $scope.items = items;
         toaster.pop('success', "title", "text");
@@ -18,8 +18,9 @@ define(['app',], function (app) {
             $scope.showDialog = true;
             ngDialog.open({
                 //template:'<p>Hello George</p>' //'dialog/defaultDialog'//,
-                 template:'dialog/',//,
-                controller: 'HomeController'
+                 template:'dialog/loginDialog',//,
+                controller: 'HomeController',
+                closeByDocument:false
             });
         });
     }]);

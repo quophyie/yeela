@@ -17,7 +17,8 @@
 	<!--<resources mapping="/resources/**" location="/resources/" />    -->
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<beans:bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
 		<beans:property name="prefix" value="/WEB-INF/pages/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
@@ -30,6 +31,7 @@
         <property name="suffix" value=".jsp" />
     </bean>-->
  <context:component-scan base-package="com.quantal.yeela"/>
- 
+
+	<!--will handle static content-->
  <mvc:default-servlet-handler/>
 </beans:beans>
