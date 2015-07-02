@@ -11,7 +11,8 @@ require.config({
         'angularAMD': 'bower_components/angularAMD/angularAMD',
         'ngAnimate':'bower_components/angular-animate/angular-animate' ,
         'toaster':'bower_components/angularjs-toaster/toaster',
-        'ngDialog':'bower_components/ngDialog/js/ngDialog'/*,
+        'ngDialog':'bower_components/ngDialog/js/ngDialog',
+        'base64':'bower_components/angular-base64/angular-base64'/*,
         'jquery':'bower_components/jquery/dist/jquery'*/
     },
     shim: {
@@ -43,6 +44,9 @@ require.config({
         },
         ngDialog :{
             deps: ["angular"]
+        },
+        base64:{
+        	deps: ["angular"]
         }
         
     },

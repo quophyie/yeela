@@ -17,4 +17,37 @@
 
 		<!--<url-pattern>/yeela</url-pattern> -->
 	</servlet-mapping>
+	
+		<!-- Secure certain urls -->
+<!-- <security-constraint>
+    <web-resource-collection>
+        <web-resource-name>yeela-dispatcher</web-resource-name>
+        <url-pattern>/login/</url-pattern>
+    </web-resource-collection>
+    <user-data-constraint>
+        <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+</security-constraint>-->
+
+<security-constraint>
+    <web-resource-collection>
+        <!-- <web-resource-name>SSL Page</web-resource-name> -->   
+         <web-resource-name>yeela-dispatcher</web-resource-name>     
+        <url-pattern>/login/*</url-pattern>
+    </web-resource-collection>    
+    <user-data-constraint>
+        <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>   
+</security-constraint>
+  
+ <security-constraint>
+    <web-resource-collection>
+         <!--  <web-resource-name>SSL FREE Pages</web-resource-name>-->
+         <web-resource-name>yeela-dispatcher</web-resource-name>        
+        <url-pattern>/</url-pattern>
+    </web-resource-collection>    
+    <user-data-constraint>
+        <transport-guarantee>NONE</transport-guarantee>
+    </user-data-constraint>
+</security-constraint>
 </web-app>

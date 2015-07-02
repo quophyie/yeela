@@ -2,8 +2,11 @@
  * Created by dman on 23/06/15.
  */
 
-define(['app',], function (app) {
-    return app.controller('HomeController', ['$scope','toaster','ngDialog',function ($scope,toaster,ngDialog) {
+define(['app'], function (app) {
+    return app.controller('HomeController', ['$scope','toaster','ngDialog','AuthenticationService' ,function ($scope,toaster,ngDialog, AuthenticationService) {
+    	'use strict'
+    	var loginResponse = AuthenticationService.query();
+		var response = "";
         this.message = "Message from View1Ctrl";
         var items = ["Car", "Bike", "House"]
         $scope.items = items;
