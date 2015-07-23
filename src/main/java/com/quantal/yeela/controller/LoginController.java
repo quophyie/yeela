@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Base64;
+
 import com.quantal.yeela.appobjects.response.LoginResponse;
 import com.quantal.yeela.appobjects.user.User;
 
@@ -14,12 +16,25 @@ import com.quantal.yeela.appobjects.user.User;
  */
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("login")
 public class LoginController {
 
-	@RequestMapping(value="", method=RequestMethod.GET)
+	@RequestMapping(value="/", method=RequestMethod.GET)
     public LoginResponse login(@RequestHeader("Authorization") String authorisationHeader){
-		User user = new User("quophyi", "");
-    	return new LoginResponse(200, "User logged in succesfully", user);
+
+		String splitAuthHeaher = authorisationHeader.split(" ")[1];
+		Base64.Decoder decoder = Base64.getDecoder();
+		byte[] decoded = decoder.decode(splitAuthHeaher) ;
+		String decodedAsString = new String(decoded);
+
+		User User = new User("quophyie", "");
+    	return new LoginResponse(200, "User logged in succesfully", User);
     }
+
+	@RequestMapping(value="loggedInUser", method = RequestMethod.GET)
+	public LoginResponse getLoggedInUser(){
+		return new LoginResponse(200, "User logged in succesfully", null);
+
+	}
+
 }

@@ -15,10 +15,14 @@
 		<servlet-name>yeela-dispatcher</servlet-name>
 		 <url-pattern>/</url-pattern>
 
-		<!--<url-pattern>/yeela</url-pattern> -->
+		<!--<url-pattern>/yeela/*</url-pattern>   -->
 	</servlet-mapping>
-	
-		<!-- Secure certain urls -->
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/yeela-dispatcher-servlet.xml
+        </param-value>
+    </context-param>
 <!-- <security-constraint>
     <web-resource-collection>
         <web-resource-name>yeela-dispatcher</web-resource-name>
@@ -31,23 +35,37 @@
 
 <security-constraint>
     <web-resource-collection>
-        <!-- <web-resource-name>SSL Page</web-resource-name> -->   
-         <web-resource-name>yeela-dispatcher</web-resource-name>     
-        <url-pattern>/login/*</url-pattern>
-    </web-resource-collection>    
+        <!-- <web-resource-name>SSL Page</web-resource-name> -->
+         <web-resource-name>yeela-dispatcher</web-resource-name>
+        <!--<url-pattern>/login/*</url-pattern>-->
+        <url-pattern>/yeela/login/*</url-pattern>
+    </web-resource-collection>
     <user-data-constraint>
         <transport-guarantee>CONFIDENTIAL</transport-guarantee>
-    </user-data-constraint>   
+    </user-data-constraint>
 </security-constraint>
-  
+
  <security-constraint>
     <web-resource-collection>
          <!--  <web-resource-name>SSL FREE Pages</web-resource-name>-->
-         <web-resource-name>yeela-dispatcher</web-resource-name>        
+         <web-resource-name>yeela-dispatcher</web-resource-name>
         <url-pattern>/</url-pattern>
-    </web-resource-collection>    
+    </web-resource-collection>
     <user-data-constraint>
         <transport-guarantee>NONE</transport-guarantee>
     </user-data-constraint>
 </security-constraint>
+
+    <filter>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowed.methods</param-name>
+            <param-value>GET,POST,HEAD,OPTIONS,PUT</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>

@@ -1,4 +1,5 @@
 
+<!--<div class="jumbotron" ng-controller="HomeController">  -->
 <div class="jumbotron">
 
     <toaster-container></toaster-container>

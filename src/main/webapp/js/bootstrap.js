@@ -3,12 +3,11 @@
  */
 /**
  * bootstraps angular onto the window.document node
- */
-define([
+ */define([
     'require',
-    'angular',
-    'app'/*,
-    'routes'   */
+    'bower_components/angular/angular',
+    'app',
+    'routes'
 ], function (require, angular) {
     'use strict';
 
